@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  font-family: "Roboto";
 }
 
 header,
@@ -19,65 +22,89 @@ footer {
 button {
   background-color: #3882f6;
   color: white;
-  padding: 3px 15px;
-  border-radius: 5px;
-}
-
-.image-container {
-  /* background-color: grey;
-  width: 100px;
-  height: 100px; */
+  padding: 5px 35px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 section {
-  /* height: 200px; */
   flex: 1;
 }
 /* HEADER */
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px 300px;
 }
 
 ul {
   margin-left: auto;
   display: flex;
-  padding: 0;
   list-style: none;
-  width: 200px;
+  width: 350px;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 a {
   text-decoration: none;
+  color: #e5e7eb;
+  font-size: 18px;
 }
+
 /* INTRO */
 
 .intro {
   display: flex;
   justify-content: center;
+  padding: 50px 300px 150px;
 }
 
 h1 {
   color: #f9faf8;
   font-size: 48px;
-  font-weight: bolder;
+  font-weight: 900;
+  width: 400px;
 }
 
 .intro p {
   font-size: 18px;
   color: #e5e7eb;
+  width: 400px;
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  align-content: unset;
+  padding-right: 30px;
 }
 
 /* PHOTOS */
 
 .photos {
   text-align: center;
+  padding: 50px 250px 100px;
 }
 .photo-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
+}
+
+.photos h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.photos img {
+  border: 5px solid #3882f6;
+  border-radius: 12px;
 }
 
 /* TESTIMONIAL */
@@ -87,13 +114,29 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 150px 150px 100px;
 }
 
 .testimonial .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 0;
+  width: 800px;
+}
+
+.testimonial p {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.testimonial p:last-child {
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
+  align-self: flex-end;
 }
 
 /* CALL TO ACTION */
@@ -101,11 +144,24 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 100px 200px;
 }
 
 .modal {
+  display: flex;
+  flex: 1 0 auto; /* i had to set shrink to 0 so that container didn't break up when minimizing viewport  */
+  flex-flow: column wrap;
+  align-items: flex-start;
   background-color: #3882f6;
   color: white;
+  height: 50px;
+  padding: 50px 300px 50px 150px;
+  border-radius: 10px;
+  column-gap: 250px;
+}
+
+.modal button {
+  border: 3px solid white;
 }
 
 /* FOOTER */
@@ -114,4 +170,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 300px;
+}
+footer p {
+  color: #e5e7eb;
+  font-size: 18px;
 }
