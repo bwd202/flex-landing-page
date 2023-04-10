@@ -3,13 +3,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  border: 1px red dotted;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
+  max-width: 100%;
   font-family: "Roboto";
 }
 
@@ -20,6 +22,7 @@ footer {
 }
 
 button {
+  border: none;
   background-color: #3882f6;
   color: white;
   padding: 5px 35px;
@@ -32,29 +35,30 @@ button {
 section {
   flex: 1;
 }
+
 /* HEADER */
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 0 250px;
+  /* padding: 0 250px; */
 }
 
 header .image-container {
   display: flex;
 }
 
-header .image-container > h2 {
+header .image-container>h2 {
   align-self: center;
   font-weight: 900;
   color: #f9faf8;
   font-size: 24px;
 }
+
 ul {
   margin-left: auto;
   display: flex;
   list-style: none;
-  width: 400px;
-  justify-content: space-between;
+  gap: 10px;
+  /* to separate nav links */
   align-items: center;
 }
 
@@ -69,15 +73,15 @@ a {
 .intro {
   display: flex;
   justify-content: center;
-  padding: 50px 300px 150px;
-  gap: 80px;
+  padding: 5% 0;
+  /* gap: 80px; */
 }
 
 h1 {
   color: #f9faf8;
   font-size: 48px;
   font-weight: 900;
-  width: 400px;
+  /* width: 400px; */
 }
 
 .intro p {
@@ -87,24 +91,38 @@ h1 {
 }
 
 .container {
-  width: 400px;
+  /* width: 400px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
-  padding-right: 30px;
+  gap: 10px;
+  /* padding-right: 30px; */
+}
+
+.intro .image-container {
+  overflow: hidden;
+}
+
+.intro img {
+  max-width: 100%;
 }
 
 /* PHOTOS */
 
 .photos {
   text-align: center;
-  padding: 50px 250px 100px;
+  padding: 5% 0;
 }
+
 .photo-grid {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* gap: 50px; */
+}
+
+.photo-grid .image-container {
+  flex: 1;
 }
 
 .photos h2 {
@@ -122,6 +140,9 @@ h1 {
 .photos p {
   color: #1f2937;
   font-size: 18px;
+  width: 80%;
+  margin: auto;
+  /* to center p under img */
 }
 
 /* TESTIMONIAL */
@@ -129,17 +150,17 @@ h1 {
 .testimonial {
   background-color: #e5e7eb;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 150px 150px 100px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10%;
 }
 
 .testimonial .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
-  width: 800px;
+  margin: auto;
+  width: 60%;
 }
 
 .testimonial p {
@@ -154,6 +175,7 @@ h1 {
   font-size: 24px;
   font-style: normal;
   align-self: flex-end;
+  width: max-content;
 }
 
 /* CALL TO ACTION */
@@ -166,7 +188,8 @@ h1 {
 
 .modal {
   display: flex;
-  flex: 1 0 auto; /* i had to set shrink to 0 so that container didn't break up when minimizing viewport  */
+  flex: 1 0 auto;
+  /* i had to set shrink to 0 so that container didn't break up when minimizing viewport  */
   flex-flow: column wrap;
   align-items: flex-start;
   background-color: #3882f6;
@@ -189,6 +212,7 @@ footer {
   align-items: center;
   padding: 50px 300px;
 }
+
 footer p {
   color: #e5e7eb;
   font-size: 18px;
