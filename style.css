@@ -160,14 +160,15 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 60%;
+  width: 70%;
 }
 
 .testimonial p {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 300;
   font-style: italic;
   color: #1f2937;
+  line-height: 1.3em;
 }
 
 .testimonial p:last-child {
@@ -183,21 +184,21 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 200px;
+  padding: 10% 20%;
 }
 
 .modal {
-  display: flex;
-  flex: 1 0 auto;
+  /* display: flex; */
+  /* flex: 1 0 auto; */
   /* i had to set shrink to 0 so that container didn't break up when minimizing viewport  */
-  flex-flow: column wrap;
-  align-items: flex-start;
+  /* flex-flow: column wrap; */
+  /* align-items: flex-start; */
   background-color: #3882f6;
   color: white;
-  height: 50px;
-  padding: 50px 250px 50px 100px;
+  height: min-content;
+  padding: 5% 15%;
   border-radius: 10px;
-  column-gap: 250px;
+  /* column-gap: 250px; */
 }
 
 .modal button {
