@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px red dotted; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Roboto";
+}
+
+header,
+.intro,
+footer {
+  background-color: #1f2937;
+}
+
+button {
+  border: none;
+  background-color: #3882f6;
+  color: white;
+  padding: 5px 35px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+section {
+  flex: 1;
+}
+
+/* HEADER */
+header {
+  display: flex;
+
+  .image-container {
+    display: flex;
+
+    h2 {
+      align-self: center;
+      font-weight: 900;
+      color: #f9faf8;
+      font-size: 24px;
+    }
+  }
+
+  ul {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    /* to separate nav links */
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 18px;
+  }
+}
+
+/* INTRO */
+
+.intro {
+  padding: 5%;
+  // below is related to img float
+  float: left;
+  width: 100%;
+
+  @media screen and (max-width: 580px) {
+    padding: 0;
+
+    .text {
+      padding: 0 2% 4%;
+    }
+  }
+
+  @media screen and (max-width: 865px) {
+    .text {
+      padding: 0 2% 4%;
+    }
+  }
+
+  @media screen and (max-width: 1208px) {
+    .text {
+      padding-right: 4%;
+    }
+  }
+
+  h1 {
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: 900;
+    /* width: 400px; */
+  }
+
+  p {
+    font-size: 18px;
+    color: #e5e7eb;
+    width: 450px;
+  }
+
+  .text {
+    /* width: 400px; */
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // gap: 10px;
+    /* padding-right: 30px; */
+    display: inline-block;
+  }
+
+  img {
+    // min-width: 250px;
+    float: right;
+  }
+}
+
+/* PHOTOS */
+
+.photos {
+  text-align: center;
+  padding: 5% 0;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* gap: 50px; */
+}
+
+.photo-grid .image-container {
+  flex: 1;
+}
+
+.photos h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.photos img {
+  border: 5px solid #3882f6;
+  border-radius: 12px;
+}
+
+.photos p {
+  color: #1f2937;
+  font-size: 18px;
+  width: 80%;
+  margin: auto;
+  /* to center p under img */
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+  background-color: #e5e7eb;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10%;
+}
+
+.testimonial .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+}
+
+.testimonial p {
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1f2937;
+  line-height: 1.3em;
+}
+
+.testimonial p:last-child {
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
+  align-self: flex-end;
+  width: max-content;
+}
+
+/* CALL TO ACTION */
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 20%;
+}
+
+.modal {
+  /* display: flex; */
+  /* flex: 1 0 auto; */
+  /* i had to set shrink to 0 so that container didn't break up when minimizing viewport  */
+  /* flex-flow: column wrap; */
+  /* align-items: flex-start; */
+  background-color: #3882f6;
+  color: white;
+  height: min-content;
+  padding: 5% 15%;
+  border-radius: 10px;
+  /* column-gap: 250px; */
+}
+
+.modal button {
+  border: 3px solid white;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  padding: 5% 0;
+}
+
+footer p {
+  margin: auto;
+  color: #e5e7eb;
+  font-size: 18px;
+}
